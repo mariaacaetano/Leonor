@@ -6,7 +6,7 @@
 
 A Leonor é uma plataforma de organização financeira pessoal e empresarial, em português, criada para ajudar a entender para onde o dinheiro vai. Reúne entradas, gastos, categorias, cartões e empresas em uma interface clara e acolhedora.
 
-A branch **`Leonor`** concentra o código preparado para apresentação pública do projeto.
+O código público do projeto está no repositório [mariaacaetano/Leonor](https://github.com/mariaacaetano/Leonor), na branch padrão **`Leonor`**.
 
 ## Por que a Leonor existe?
 
@@ -40,9 +40,11 @@ A autenticação usa JWT, e as senhas são armazenadas com scrypt. Os registros 
 
 Pré-requisito: Docker com Docker Compose.
 
-Na raiz do projeto:
+Clone a branch pública e entre na pasta do projeto:
 
 ```sh
+git clone --branch Leonor --single-branch https://github.com/mariaacaetano/Leonor.git
+cd Leonor
 cp .env.example .env
 ```
 
