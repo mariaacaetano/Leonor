@@ -1,3 +1,5 @@
+name: leonor
+
 services:
   db:
     image: postgres:17-alpine

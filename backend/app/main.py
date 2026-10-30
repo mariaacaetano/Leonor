@@ -137,7 +137,7 @@ with SessionLocal() as session:
             tag = PersonTag(user_id=purchase.user_id, name=name); session.add(tag); session.flush()
         purchase.payer_tag_id = tag.id
     session.commit()
-app = FastAPI(title='MeuSaldo API')
+app = FastAPI(title='Leonor API')
 bearer = HTTPBearer()
 DEFAULTS = ['Mercado','Higiene','Delivery','Gasolina','Farmácia','Academia']
 def db():
