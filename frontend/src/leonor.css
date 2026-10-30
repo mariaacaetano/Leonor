@@ -1,0 +1,292 @@
+/* Leonor brand system. Fonts and artwork are supplied by the local brand kit. */
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('/brand/fonts/DejaVuSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('/brand/fonts/DejaVuSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DejaVu Serif';
+  src: url('/brand/fonts/DejaVuSerif.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bosque: #173f35;
+  --marfim: #f7f3e9;
+  --salvia: #b9cbb9;
+  --pessego: #e7b29b;
+  --tinta: #243b34;
+  --surface: #fffefa;
+  --muted: #566b61;
+  --line: #e3e7dc;
+  --sage-soft: #edf2e9;
+  --peach-soft: #f4e1d5;
+  --expense: #8b4934;
+  font-family: 'DejaVu Sans', sans-serif;
+  color: var(--tinta);
+  background: #faf9f5;
+  line-height: 1.5;
+}
+
+body { min-width: 320px; }
+button, input, select { font-family: inherit; }
+button { min-height: 40px; }
+button, input, select, summary { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, summary:focus-visible, a:focus-visible {
+  outline: 3px solid var(--pessego);
+  outline-offset: 3px;
+}
+input, select { min-height: 46px; border-color: #bdc8b9; border-radius: 10px; font-weight: 400; }
+input::placeholder { color: #627268; opacity: 1; }
+input:focus, select:focus { border-color: var(--bosque); box-shadow: 0 0 0 3px #b9cbb966; }
+p, small { color: var(--muted); }
+h1 { font-family: 'DejaVu Serif', serif; font-weight: 400; font-size: clamp(28px, 2.4vw, 36px); letter-spacing: -.8px; line-height: 1.25; color: var(--bosque); }
+h2, h3 { letter-spacing: -.35px; }
+.eyebrow { font-size: 11px; letter-spacing: 1.5px; color: var(--muted); }
+.primary { background: var(--bosque); color: var(--marfim); border-radius: 12px; min-height: 46px; }
+.primary:hover { background: #245849; }
+.secondary { background: var(--surface); border-color: #bdc8b9; border-radius: 10px; }
+.secondary:hover { background: #e8eddf; }
+.text-button { color: var(--bosque); font-weight: 700; text-underline-offset: 4px; }
+.text-button:hover { text-decoration: underline; }
+
+/* A quiet, permanent point of reference for the main navigation. */
+aside { width: 250px; padding: 32px 20px 22px; background: var(--surface); color: var(--tinta); border: 0; border-right: 1px solid var(--line); overflow-y: auto; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.brand > img { display: block; width: 180px; height: auto; }
+.brand > span { padding: 0 0 0 7px; margin: 0; font: 12px/1.6 'DejaVu Sans', sans-serif; letter-spacing: 0; color: var(--muted); }
+.nav-label { font-size: 11px; color: var(--muted); margin: 42px 14px 14px; letter-spacing: 1.5px; }
+nav { gap: 7px; }
+nav button { min-height: 48px; border-radius: 9px; color: var(--muted); font-size: 13px; padding: 12px 14px; }
+nav button.active { background: var(--sage-soft); color: var(--bosque); box-shadow: inset 3px 0 var(--bosque); }
+nav button:hover { background: #f4f6ef; color: var(--bosque); }
+nav button.active:hover { background: #e6edde; color: var(--bosque); }
+nav button svg { flex-shrink: 0; }
+.sidebar-note { background: #f7f6ef; color: var(--bosque); border-radius: 12px; padding: 20px; margin-top: auto; margin-bottom: 24px; }
+.sidebar-note > img { display: block; margin-bottom: 14px; }
+.sidebar-note > span { font-family: 'DejaVu Serif', serif; font-size: 18px; font-weight: 400; line-height: 1.4; }
+.sidebar-note p { font-size: 12px; color: var(--muted); margin: 9px 0 0; line-height: 1.8; }
+.account { border-color: var(--line); padding-top: 20px; }
+.account button, .account-profile strong { color: var(--bosque); }
+.account-profile:hover strong { color: var(--bosque); }
+.account small { color: var(--muted); font-size: 12px; }
+.account .avatar { background: var(--sage-soft); color: var(--bosque); width: 38px; height: 38px; }
+.app { min-height: 100dvh; }
+main { margin-left: 250px; padding: 40px 38px 24px; display: flex; flex-direction: column; }
+.app > main > * { flex-shrink: 0; }
+.app > main > footer { margin-top: auto; }
+header { padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+header h1 { margin-top: 12px; }
+header p { font-size: 13px; max-width: 600px; margin-top: 12px; }
+.shortcut-hint { font-size: 10px; }
+.period { margin: 24px 0; gap: 16px; flex-wrap: wrap; }
+.dot { background: var(--bosque); }
+.month-picker { border-color: #bdc8b9; border-radius: 10px; padding: 2px; }
+.month-picker input { font-size: 13px; min-height: 40px; width: 175px; }
+.month-picker button { color: var(--bosque); min-width: 36px; }
+.panel, .stat { background: var(--surface); border-color: var(--line); border-radius: 12px; }
+.stat { padding: 23px; }
+.stat > div { color: var(--muted); font-size: 13px; }
+.stat > div > span { color: var(--bosque); background: var(--sage-soft); flex-shrink: 0; width: 36px; height: 36px; }
+.stat > strong { font-size: clamp(23px, 2.2vw, 32px); font-weight: 700; letter-spacing: -1px; font-variant-numeric: tabular-nums; margin: 18px 0 14px; }
+.stat small { font-size: 12px; }
+.stat.balance { background: #f1f5ec; color: var(--bosque); border: 1px solid #dce5d5; }
+.balance > div, .balance small { color: var(--muted); }
+.balance > div > span { color: var(--bosque); background: #e3ecdc; }
+.expense > div > span, .pending > div > span { background: var(--peach-soft); color: var(--expense); }
+.panel-title h2 { font-family: 'DejaVu Serif', serif; font-size: 21px; font-weight: 400; line-height: 1.4; color: var(--bosque); }
+.panel-title p { font-size: 12px; line-height: 1.7; }
+.stat > .stat-breakdown { display: grid; gap: 5px; justify-content: stretch; align-items: stretch; border-top: 1px solid var(--line); padding-top: 12px; }
+.stat-breakdown small { display: flex; justify-content: space-between; gap: 12px; line-height: 1.6; }
+.stat-breakdown b { font-weight: 400; font-variant-numeric: tabular-nums; }
+.balance .stat-breakdown { border-color: #dce5d5; }
+.overview-totals { gap: 18px; }
+.overview-totals .stat > strong { font-size: clamp(24px, 2.2vw, 32px); }
+.overview-explainer { display: flex; align-items: flex-start; gap: 12px; background: transparent; padding: 0 2px; border-radius: 0; margin: 0 0 24px; }
+.overview-explainer svg { flex-shrink: 0; color: var(--bosque); margin-top: 3px; }
+.overview-explainer p { font-size: 12px; line-height: 1.8; margin: 0; color: var(--muted); }
+.overview-explainer strong { font-weight: 700; margin-right: 5px; }
+.overview-panels { gap: 22px; }
+.overview-icon { background: #e3eadd; color: var(--bosque); width: 44px; height: 44px; border-radius: 12px; }
+.overview-panel:nth-child(2) .overview-icon { background: var(--peach-soft); }
+.overview-panel > .panel-title .text-button { font-size: 12px; }
+.overview-metrics { gap: 22px 14px; padding-bottom: 24px; }
+.overview-metrics dt { font-size: 12px; color: var(--muted); }
+.overview-metrics dd { font-size: 21px; letter-spacing: -.5px; }
+.overview-details h3 { color: var(--muted); font-size: 12px; }
+.overview-categories li > div:first-child, .overview-categories strong { font-size: 12px; }
+.overview-company-list strong, .overview-company-list small { font-size: 12px; }
+.overview-company-list button { padding: 16px 0; gap: 10px; }
+.overview-company-list button:hover { background: var(--marfim); }
+.overview-panel .income, .amount.income { color: var(--bosque); }
+.overview-panel .expense, .amount.expense { color: var(--expense); }
+.overview-note { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.bar { height: 7px; background: #e9eadf; }
+
+/* Shared controls keep the same meaning and contrast in every section. */
+th { background: var(--marfim); color: var(--muted); font-weight: 700; font-size: 12px; }
+td, td strong, td small { font-size: 12px; }
+td { border-color: #e5e5da; }
+.badge { color: var(--bosque); background: #e6ecdf; }
+.status { color: #71432f; background: var(--peach-soft); }
+.status.paid { color: var(--bosque); background: #e0e9da; }
+.icon-button { color: var(--muted); min-width: 36px; min-height: 40px; }
+.empty { padding: 42px 24px; color: var(--muted); }
+.empty h3 { color: var(--bosque); font-family: 'DejaVu Serif', serif; font-size: 21px; font-weight: 400; }
+.empty p { font-size: 13px; }
+.bank-card { background: var(--sage-soft); color: var(--bosque); border-radius: 10px; border: 1px solid #dce5d5; }
+.card-summary .bank-card:hover { background: #e6edde; }
+.bank-card small { color: var(--muted); }
+.invoice-metrics .invoice-metric-total { background: #f1f5ec; color: var(--bosque); border-color: #dce5d5; }
+.invoice-metrics .invoice-metric-total span, .invoice-metrics .invoice-metric-total small { color: var(--muted); }
+.category-grid button, .category-item { border-radius: 12px; border-color: var(--line); }
+.form-note { background: var(--marfim); color: var(--muted); font-size: 12px; line-height: 1.8; }
+.segmented { background: #e8eadf; }
+.segmented button.selected { background: var(--surface); color: var(--bosque); }
+.modal, .company-dialog, .invoice-dialog, .category-delete-dialog { background: var(--surface); color: var(--tinta); border-radius: 18px; }
+.modal label, .company-dialog label, .profile-panel label { font-size: 13px; }
+.company-dialog-heading h2 { font-family: 'DejaVu Serif', serif; font-weight: 400; font-size: 24px; }
+.invoice-context .month-picker, .invoice-context .primary { height: auto; }
+.profile-avatar { background: var(--sage-soft); color: var(--bosque); }
+.profile-panel-heading > span { background: #e6ecdf; color: var(--bosque); }
+footer { align-items: center; gap: 16px; padding-top: 30px; font-size: 12px; color: var(--muted); }
+footer > img { display: block; width: 100px; height: auto; }
+
+/* Brand introduction: editorial headings, plain instructions, local assets. */
+.auth { background: var(--surface); }
+.auth-story { background: var(--bosque); padding: 48px clamp(32px, 5vw, 80px); color: var(--marfim); }
+.auth-story .brand > img { width: 200px; }
+.auth-story .brand > span { color: var(--salvia); }
+.auth-story .auth-home-link { color: var(--marfim); }
+.auth-story .eyebrow { color: var(--salvia); font-size: 11px; }
+.auth-story h1 { color: var(--marfim); font-size: clamp(34px, 3.2vw, 48px); font-weight: 400; letter-spacing: -1px; line-height: 1.3; margin-top: 24px; }
+.auth-story h1 em { font-style: normal; color: var(--pessego); }
+.auth-story p { font-size: 15px; line-height: 1.9; max-width: 420px; color: var(--marfim); margin: 24px 0 32px; }
+.story-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; gap: 20px; }
+.story-card span, .story-card strong { color: var(--bosque); font-size: 13px; }
+.auth-story > small { color: var(--salvia); font-size: 12px; }
+.auth-form { max-width: 450px; padding: 36px; }
+.auth-form h2 { font-family: 'DejaVu Serif', serif; font-size: 32px; font-weight: 400; color: var(--bosque); margin-top: 16px; line-height: 1.4; }
+.auth-form > p { font-size: 14px; }
+.auth-form label { font-size: 13px; margin: 22px 0; }
+.auth-form input { background: var(--surface); min-height: 50px; font-size: 14px; }
+.auth-form > .primary { min-height: 50px; }
+.auth-form > small { font-size: 12px; }
+.auth-form > fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.auth-form .auth-field-help { display: block; margin: -14px 0 20px; font-weight: 400; font-size: 12px; line-height: 1.7; }
+.auth-register { max-width: 510px; padding-top: 40px; padding-bottom: 40px; }
+.auth-form .registration-location, .profile-panel .profile-location { border: 0; border-top: 1px solid var(--line); padding: 20px 0 0; margin: 28px 0 0; min-width: 0; }
+.registration-location legend, .profile-location legend { padding: 0 10px 0 0; font-size: 14px; font-weight: 700; color: var(--bosque); }
+.registration-location legend span, .profile-location legend span { font-weight: 400; font-size: 12px; color: var(--muted); }
+.registration-location > p, .profile-location > p { font-size: 12px; margin: 0 0 16px; }
+.auth-form .location-fields label { margin: 0 0 18px; }
+.auth-form .location-fields .form-grid { gap: 0 14px; }
+.location-fields input { min-width: 0; }
+.profile-panel .location-fields .form-grid { grid-template-columns: 1fr; }
+.category-field { min-width: 0; margin-bottom: 18px; }
+.modal .category-field > label { margin-bottom: 0; }
+.category-add { font-size: 12px; padding: 9px 0 4px; justify-content: flex-start; }
+.category-create { margin-top: 12px; padding: 12px; background: var(--marfim); border: 1px solid var(--line); border-radius: 8px; }
+.modal .category-create > label { margin-bottom: 0; font-size: 12px; }
+.category-create-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.category-create-actions > button { font-size: 12px; padding: 9px 11px; }
+.category-create .error { font-size: 12px; margin-bottom: 0; }
+
+@media (min-width: 1600px) {
+  main { padding-left: 56px; padding-right: 56px; }
+}
+@media (max-width: 1200px) {
+  header { flex-wrap: wrap; }
+  .overview-totals { gap: 12px; }
+  .overview-totals .stat { padding: 20px; }
+  .overview-totals .stat > div:first-child { font-size: 12px; align-items: flex-start; }
+  .overview-totals .stat > strong { font-size: 24px; }
+}
+@media (min-width: 761px) and (max-width: 1150px) {
+  aside { width: 220px; padding: 28px 16px; }
+  main { margin-left: 220px; padding: 30px 24px; }
+  nav button { font-size: 12px; }
+  .sidebar-note { padding: 16px; margin-top: 32px; }
+  .overview-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-totals .stat.balance { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .app { display: flex; flex-direction: column; }
+  aside { width: 100%; padding: 18px 18px 12px; overflow: visible; border-right: 0; border-bottom: 1px solid var(--line); }
+  aside .brand > img { width: 160px; }
+  .brand > span, .sidebar-note, .account { display: none; }
+  nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; overflow: visible; margin-top: 18px; }
+  nav button { font-size: 12px; padding: 10px 12px; min-height: 44px; white-space: normal; text-align: left; }
+  nav .mobile-logout { grid-column: 1 / -1; justify-self: end; min-height: 36px; }
+  nav svg { width: 18px; }
+  main { margin: 0; padding: 26px 18px 20px; }
+  header { display: block; padding-bottom: 22px; }
+  header .eyebrow { font-size: 10px; letter-spacing: 1px; }
+  header h1 { font-size: 30px; }
+  header p { max-width: none; font-size: 13px; }
+  header > .primary { font-size: 13px; min-height: 46px; padding: 12px 16px; margin-top: 20px; width: 100%; }
+  header .shortcut-hint { display: none; }
+  .period { margin: 20px 0; align-items: flex-start; gap: 12px; }
+  .period > div:first-child { width: 100%; font-size: 12px; }
+  .month-picker { width: 100%; }
+  .month-picker input { flex: 1; width: 140px; font-size: 14px; text-align: center; }
+  .month-picker button { min-width: 44px; min-height: 44px; }
+  .stat { padding: 18px 14px; }
+  .stat > div { font-size: 12px; }
+  .stat > strong { font-size: 23px; }
+  .stat > div > span { width: 30px; height: 30px; }
+  .stat small { font-size: 12px; }
+  .overview-totals { gap: 12px; }
+  .overview-totals .stat { padding: 18px 14px; }
+  .overview-totals .stat > div:first-child { flex-wrap: wrap-reverse; gap: 10px; }
+  .overview-totals .stat.balance > div:first-child { flex-wrap: nowrap; }
+  .overview-totals .stat > strong { font-size: 22px; margin: 14px 0; }
+  .overview-totals .stat.balance > strong { font-size: 30px; }
+  .stat-breakdown small { display: block; }
+  .stat-breakdown small b { display: block; }
+  .balance .stat-breakdown small { display: flex; }
+  .overview-explainer { padding: 16px; gap: 10px; }
+  .overview-explainer strong { display: block; }
+  .overview-panel > .panel-title { gap: 12px; }
+  .overview-panel > .panel-title .text-button { font-size: 12px; }
+  .panel-title h2 { font-size: 21px; }
+  .overview-panel-heading { gap: 10px; }
+  .overview-icon { width: 38px; height: 38px; }
+  .overview-panel .panel-title p { font-size: 12px; }
+  .overview-metrics dd { font-size: 20px; }
+  .overview-company-list strong, .overview-company-list small { font-size: 12px; }
+  .overview-company-list button { flex-wrap: wrap; }
+  .overview-company-list button > span:first-child { flex-basis: 100%; }
+  .overview-company-balance { text-align: left; max-width: none; flex: 1; }
+  .overview-note { font-size: 12px; }
+  .section-heading { flex-wrap: wrap; }
+  .section-heading > p { font-size: 13px; }
+  input, select, .modal input, .modal select, .profile-panel input, .company-dialog input { font-size: 16px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .invoice-context { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .invoice-context label { max-width: none; }
+  .invoice-context select { font-size: 16px; }
+  .invoice-context .month-picker { min-height: 48px; }
+  .invoice-context .month-picker input { width: 100%; font-size: 16px; }
+  footer { flex-wrap: wrap; }
+  footer span { font-size: 12px; }
+  .auth-story { padding: 30px 26px; min-height: auto; }
+  .auth-story .brand > img { width: 160px; }
+  .auth-story > div:nth-child(2) { margin-top: 32px; }
+  .auth-story h1 { font-size: 36px; letter-spacing: -1px; margin-top: 14px; }
+  .auth-story p { font-size: 14px; margin: 18px 0 0; }
+  .auth-form { padding: 34px 26px 40px; max-width: 450px; }
+  .auth-form h2 { font-size: 28px; }
+  .auth-form input { font-size: 16px; }
+}

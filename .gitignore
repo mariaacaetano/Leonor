@@ -1,0 +1,36 @@
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dados financeiros locais e backups
+backups/
+*.sql
+*.dump
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# Dependências e arquivos gerados
+.venv/
+venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.coverage
+coverage/
+htmlcov/
+*.log
+*.tsbuildinfo
+
+# Preferências do editor e do sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
